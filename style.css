@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Titillium Web', sans-serif;
+  background: #f8fafc;
+}
+
+.plan-table {
+  display: grid;
+  gap: 2.4rem;
+  padding: 2.4rem;
+}
+
+section {
+  width: 32.0rem;
+  margin: auto;
+}
+
+section:hover {
+  transform: scale(1.08);
+}
+
+section {
+  transition: transform 300ms;
+  animation: card-appear 800ms;
+}
+
+section .content {
+  padding:2.4rem;
+  background: #ffffff;
+  border: 0.1rem solid #E2E8F0;
+  border-radius: 1.0rem;
+}
+
+section .content:hover {
+  border-color: #996DFF;
+}
+
+section .content {
+  transition: border 200ms;
+}
+
+
+.content p {
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  line-height: 2.1rem;
+  letter-spacing: 0.06em;
+  color: #7C3AED;
+}
+
+.plan-title {
+  margin-top: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 2.4rem;
+  line-height: 3.7rem;
+  color: #1E293B;
+}
+
+.plan-price {
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  color: #1e293b;
+}
+
+.plan-price strong {
+  font-size: 2rem;
+  line-height: 3.0rem;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.6rem;
+  padding: 1.6rem 2.4rem;
+  width: 100%;
+  border: 1px solid #1E293B;
+  border-radius: 0.4rem;
+  color:#1E293B;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+}
+
+button.primary:hover {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+
+ul {
+  border-top: 1px solid #e2e8f0;
+  list-style: none;
+  padding-top: 1.6rem;
+  margin-top: 1.6rem;
+  display: grid;
+  gap: 1.6rem;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+li span {
+  color: #475569;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.06;
+  flex: 1;
+}
+
+li i.ph-check {
+  font-size: 2rem;
+  color: #1B873F;
+}
+
+li i.ph-info {
+  font-size: 1.6rem;
+  color: #0F172A;
+}
+
+.enterprise .title {
+  font-size: 3.2rem;
+  line-height: 4.9rem;
+}
+
+.enterprise button {
+  margin-top: 3.2rem;
+}
+
+.enterprise ul {
+  padding-top: 3.2rem;
+}
+
+.essentials.economy {
+  position: relative;
+  margin-top: 1.6rem;
+}
+
+.essentials.economy::before {
+  content: "MAIS ECONÔMICO";
+  background-color: #FBA94C;
+  color: #0F172A;
+  border-radius: 0.6rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -1.7rem;
+}
+
+.ultimate.advantage {
+  position: relative;
+  margin-top: 1.6rem;
+}
+
+.ultimate.advantage::before {
+  content: "MAIS VANTAJOSO";
+  background-color: #FBA94C;
+  color: #0F172A;
+  border-radius: 0.6rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: -1.7rem;
+}
+
+.ultimate .content {
+  padding-top: 4rem;
+  background: #0F172A;
+}
+
+.ultimate p {
+  color: #996DFF;
+}
+
+.ultimate .title,
+.ultimate .price {
+  color: #F8FAFC;
+}
+
+button.secondary {
+  background: #996DFF;
+  color: #ffffff;
+}
+
+button.secondary:hover {
+  background: #7C3AED;
+}
+
+
+.ultimate ul {
+  border-color: #334155;
+}
+
+.ultimate li span {
+  color: #CBD5E1;
+}
+
+.ultimate .ph-info {
+  color: #64748B;
+}
+
+
+@keyframes card-appear {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+
+@media only screen and (min-width: 1000px) {
+  .plan-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem auto;
+  }
+  
+  .essentials,
+  .enterprise,
+  .ultimate {
+    display: grid;
+    height: 45.4rem;
+    width: 38.4rem;
+  }
+
+  .enterprise {
+    margin: 1.8rem auto;
+  }
+  
+}
