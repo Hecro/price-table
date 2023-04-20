@@ -33,7 +33,7 @@ section:hover {
 
 section {
   transition: transform 300ms;
-  animation: card-appear 800ms;
+  animation: card-appear 800ms backwards var(--delay);
 }
 
 section .content {
